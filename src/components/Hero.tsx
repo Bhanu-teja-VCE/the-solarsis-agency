@@ -3,13 +3,13 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" aria-label="Solarsis Agency Hero">
       {/* Background effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[120px] opacity-50 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-[100px] opacity-30 pointer-events-none translate-x-1/4 -translate-y-1/4" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[120px] opacity-50 pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-[100px] opacity-30 pointer-events-none translate-x-1/4 -translate-y-1/4" aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-        <div className="flex flex-col items-start text-left">
+        <article className="flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-white/10 text-xs font-medium text-purple-300 mb-8"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>We solve hurdles using AI.</span>
+            <span>Solarsis Agency — AI Automation Experts</span>
           </motion.div>
 
           <motion.h1
@@ -26,8 +26,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
           >
+            Solarsis Agency:<br />
             Scale Infinitely.<br />
-            Work Less.<br />
             <span className="text-gradient">Automate Everything.</span>
           </motion.h1>
 
@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-white/60 mb-10 max-w-xl leading-relaxed"
           >
-            From custom AI software to fully automated workflows, we build the systems that put your business on autopilot.
+            Solarsis Agency builds custom AI automation, RAG-powered software, and intelligent AI workflows that put your business on autopilot. From vector databases to omnichannel lead generation — we help businesses in Hyderabad and globally achieve unstoppable growth.
           </motion.p>
 
           <motion.div
@@ -54,7 +54,7 @@ export default function Hero() {
               View Our Work
             </button>
           </motion.div>
-        </div>
+        </article>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}

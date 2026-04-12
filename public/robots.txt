@@ -1,0 +1,29 @@
+# Solarsis Agency - robots.txt
+# Allow all major search bots to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /admin
+
+# Sitemap location
+Sitemap: https://solarsis.agency/sitemap.xml
+
+# Crawl-delay for polite crawling
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
