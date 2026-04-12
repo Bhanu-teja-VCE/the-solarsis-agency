@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, X, Send, User, CalendarCheck, CheckCircle2, Phone, Mail as MailIcon, UserCircle } from 'lucide-react';
+import { MessageSquare, X, Send, User, CalendarCheck, CheckCircle2, Phone, Mail as MailIcon, UserCircle, Zap } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
@@ -250,6 +250,21 @@ PERSONALITY & RULES:
                 </div>
               </div>
               <div className="flex items-center gap-2">
+                {/* Audit Engine Button */}
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('audit-engine');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                      setIsOpen(false);
+                    }
+                  }}
+                  className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-[11px] font-medium hover:bg-purple-500/30 transition-colors"
+                >
+                  <Zap className="w-3 h-3" />
+                  Run Audit
+                </button>
+
                 {/* Quick Book Button in Header */}
                 {!bookingSubmitted && !showBookingForm && (
                   <button
